@@ -19,6 +19,7 @@ next project.</p>
                 </div>
 
              </div>
+            
 
              {/* Right side */}
              <div>
