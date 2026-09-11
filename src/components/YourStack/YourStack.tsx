@@ -1,12 +1,16 @@
 import React, { type Dispatch, type SetStateAction } from 'react';
 import type { DevStackType } from '../../Type/DevStackType';
 import YourStackCard from './YourStackCard';
+import { toast } from 'react-toastify';
 interface yourStackProp{
        devAddStacks:DevStackType[]
     setdevAddStack:Dispatch<SetStateAction<DevStackType[]>>
 }
 const YourStack = ({devAddStacks,setdevAddStack}:yourStackProp) => {
-    console.log(devAddStacks)
+    const handleRemoveAll =()=>{
+        setdevAddStack([]);
+        toast.error(`All Stack is Successfully Remove`)
+    }
     if(devAddStacks.length=== 0){
         return <div className='w-96 h-55 rounded-xl shadow-xl border-2 border-gray-200 py-5 px-5'>
             <h1 className='text-lg font-bold '>Your Stack</h1>
@@ -32,7 +36,7 @@ const YourStack = ({devAddStacks,setdevAddStack}:yourStackProp) => {
                 </div> 
 
                  <div>
-            <button className="my-6 btn btn-outline btn-error w-80">Remove All</button>
+            <button onClick={handleRemoveAll} className="my-6 btn btn-outline btn-error w-80">Remove All</button>
           </div>
 
 
