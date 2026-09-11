@@ -7,18 +7,33 @@ interface yourStackProp{
 }
 const YourStack = ({devAddStacks,setdevAddStack}:yourStackProp) => {
     console.log(devAddStacks)
+    if(devAddStacks.length=== 0){
+        return <div className='w-96 h-55 rounded-xl shadow-xl border-2 border-gray-200 py-5 px-5'>
+            <h1 className='text-lg font-bold '>Your Stack</h1>
+            <p className='text-[#94A3B8]'>No technologies selected yet</p>
+           <div className=' text-[#94A3B8] mt-8 w-80  h-20 py-5 px-7 text-center rounded-xl border-1 border-gray-200'>
+            Your Stack is Empty
+           </div>
+          
+        </div>
+    }
     return (
         <div>
 
             <div className='w-96  rounded-xl shadow-xl border-2 border-gray-200 py-5 px-5'>
                 <h1 className='text-lg font-bold '>Your Stack</h1>
-                <p>{`${devAddStacks.length} Technology Selected`}</p> 
+                <p className='text-[#94A3B8]'>{`${devAddStacks.length} Technology Selected`}</p> 
+                
 
                 <div>
                     {
-                        devAddStacks.map((devStack)=><YourStackCard devStack={devStack} key={devStack.id}></YourStackCard>)
+                        devAddStacks.map((devStack)=><YourStackCard devStack={devStack} key={devStack.id} devAddStacks={devAddStacks} setdevAddStack={setdevAddStack}></YourStackCard>)
                     }
-                </div>
+                </div> 
+
+                 <div>
+            <button className="my-6 btn btn-outline btn-error w-80">Remove All</button>
+          </div>
 
 
 

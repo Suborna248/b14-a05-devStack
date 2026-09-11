@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { type Dispatch, type SetStateAction } from 'react';
 import type { DevStackType } from '../../Type/DevStackType';
 import { RiCloseLargeFill } from 'react-icons/ri';
+import { toast } from 'react-toastify';
 
 interface yourStackCardProp{
     devStack:DevStackType
+     devAddStacks:DevStackType[]
+     setdevAddStack:Dispatch<SetStateAction<DevStackType[]>>
 
 }
 
-const YourStackCard = ({devStack}:yourStackCardProp) => {
+const YourStackCard = ({devStack,devAddStacks,setdevAddStack}:yourStackCardProp) => {
+    const handleRemoveStack=()=>{
+        const removeStack = devAddStacks.filter(devStac=> devStac.id !== devStack.id)
+        setdevAddStack(removeStack);
+         toast.error(`${devStack.name} is Successfully Remove`)
+
+
+    }
     return (
         <div className='card bg-base-100 border-1 border-gray-200 w-80 h-20 rounded-xl py-4 px-4 mt-5 '>
           <div className="flex justify-between items-center">
@@ -19,9 +29,11 @@ const YourStackCard = ({devStack}:yourStackCardProp) => {
                 </div>
             </div>
 
-              <RiCloseLargeFill />
+              < RiCloseLargeFill  onClick={handleRemoveStack} />
 
           </div>
+
+         
         </div>
     );
 };

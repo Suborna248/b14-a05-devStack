@@ -2,6 +2,7 @@ import React, { useState, type Dispatch, type SetStateAction } from 'react';
 import type { DevStackType } from '../../Type/DevStackType';
 import { GoStarFill } from 'react-icons/go';
 import { TiTick } from 'react-icons/ti';
+import { toast } from 'react-toastify';
 interface DevStackCardsProps {
     devStack:DevStackType
     devAddStacks:DevStackType[]
@@ -9,12 +10,16 @@ interface DevStackCardsProps {
 }
 
 const DevStackCards = ({devStack,devAddStacks,setdevAddStack}:DevStackCardsProps) => {
-    const [isAdded,setAdded]= useState(false)
+   
+
+    const isAdded = devAddStacks.some(
+  (stack) => stack.id === devStack.id
+);
   
     const handledevAddStack =()=>{
-        setAdded(true)
-setdevAddStack([...devAddStacks,devStack])
 
+        setdevAddStack([...devAddStacks,devStack])
+       toast.success(`${devStack.name} is Successfully added`)
         
 
     }
