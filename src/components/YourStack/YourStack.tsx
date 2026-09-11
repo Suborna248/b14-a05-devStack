@@ -36,7 +36,7 @@ const YourStack = ({devAddStacks,setdevAddStack}:yourStackProp) => {
                 </div> 
 
                  <div>
-            <button onClick={handleRemoveAll} className="my-6 btn btn-outline btn-error w-80">Remove All</button>
+            <button onClick={handleRemoveAll} className=" text-lg font-bold my-6 btn btn-outline btn-error w-80 bg-gradient-to-r from-[#D82C20]  to-[#ED8C85] bg-clip-text text-transparent">Remove All</button>
           </div>
 
 

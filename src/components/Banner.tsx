@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div >
 
-            <div className="  md:text-left sm:text-center flex flex-col md:flex-row gap-32  items-center container mx-auto md:mt-0 mt-5">
+            <div className="  md:text-left text-center flex flex-col md:flex-row gap-32  items-center container mx-auto md:mt-0 mt-5">
              {/*Left side */}
              <div className='max-w-[600px] space-y-7'>
                 <h1 className="text-6xl font-extrabold">Build Your Ideal <span className='bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent'>Development Stack</span></h1>

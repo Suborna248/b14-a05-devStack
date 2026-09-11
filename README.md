@@ -1,32 +1,23 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+##  Project Name:  DevStack 
+##  Project Description : DevStack is a responsive web application that helps developers explore different technologies and create their own personalized technolgy stack.Users can  view technology details ,add technologies to their stack , remove individual technologies  or remove all selected technologies.
 
-Currently, two official plugins are available:
+## Technologies Used :
+ 
+ * React.js 
+ * TypeScript 
+ * Tailwind CSS
+ * DaisyUI 
+ * React Icons
+ * React Toastify
+  
+  ## Key Features: 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+  # Technology Explorer: Users can browse different technologies with their name, category, description, difficulty level, rating, badge, and icon.
 
-## React Compiler
+  # Personalized Tech Stack: Users can add technologies to their personal stack. Added technologies are visually highlighted, and the "Add to Stack" button becomes disabled to prevent duplicate selections.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  # Stack Management:Users can remove individual technologies or use the Remove All button to clear their entire stack. The UI automatically updates when technologies are added or removed. 
+ 
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+  

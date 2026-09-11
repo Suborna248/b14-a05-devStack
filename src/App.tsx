@@ -6,6 +6,7 @@ import DevStacksTech from './components/DevStacks/DevStacksTech'
 import Navbar from './components/Navbar/Navbar'
 import type { DevStackType } from './Type/DevStackType'
 import Footer from './components/Footer/Footer'
+import Spinner from './components/LoadSpinner/Spinner'
 
 const fetchStacks = async ():Promise<DevStackType[]>=>{
   const res =  await fetch("/devStack.json");
@@ -22,7 +23,7 @@ function App() {
     <>
     <Navbar></Navbar>
     <Banner></Banner>
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={<Spinner></Spinner>}>
       <DevStacksTech devStackPromise={devStackPromise}></DevStacksTech>
     </Suspense> 
 

@@ -24,7 +24,7 @@ const DevStackCards = ({devStack,devAddStacks,setdevAddStack}:DevStackCardsProps
 
     }
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto  '>
 
        <div className={` ${isAdded ? "py-10 px-3 bg-pink-50 h-96  w-100  md:w-85 shadow-sm border-1 border-pink-500 rounded-2xl":"py-10 px-3 bg-base-100 h-96  w-100  md:w-85 shadow-sm border-1 border-gray-200 rounded-2xl"}`}>
      <div className='flex justify-between'>
@@ -33,7 +33,7 @@ const DevStackCards = ({devStack,devAddStacks,setdevAddStack}:DevStackCardsProps
       src={devStack.icon}
       alt="Shoes" />
 
-      <p className='w-25 h-10 text-lg text-center py-1   border rounded-full border-amber-300 bg-amber-50 text-amber-500'>{devStack.badge}</p>
+      <p className='w-22 h-8 text-md text-center py-1   border rounded-full border-amber-300 bg-amber-50 text-amber-500'>{devStack.badge}</p>
 
   </div>
   

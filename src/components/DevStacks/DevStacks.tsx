@@ -16,7 +16,7 @@ const DevStacks = ({devStackPromise,devAddStacks,setdevAddStack}:DevStacksProp) 
    
     return (
         <div className="">
-          <div className="  grid grid-cols-1 md:grid-cols-3 gap-8   ">
+          <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 ">
 
               {
                 devStacks.map((devStack:DevStackType)=><DevStackCards devStack={devStack} key={devStack.id} devAddStacks={devAddStacks} setdevAddStack={setdevAddStack}></DevStackCards>)

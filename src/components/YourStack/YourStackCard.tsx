@@ -25,11 +25,11 @@ const YourStackCard = ({devStack,devAddStacks,setdevAddStack}:yourStackCardProp)
                 <img className='w-10 h-8' src={devStack.icon} alt="" />
                 <div>
                     <h1 className='text-md font-bold'>{devStack.name}</h1>
-                    <p className='text-xs'>{devStack.category}</p>
+                    <p className='text-xs text-gray-400'>{devStack.category}</p>
                 </div>
             </div>
 
-              < RiCloseLargeFill  onClick={handleRemoveStack} />
+              < RiCloseLargeFill className='text-xl text-gray-400'  onClick={handleRemoveStack} />
 
           </div>
 
