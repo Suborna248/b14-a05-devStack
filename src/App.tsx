@@ -5,6 +5,7 @@ import Banner from './components/Banner'
 import DevStacksTech from './components/DevStacks/DevStacksTech'
 import Navbar from './components/Navbar/Navbar'
 import type { DevStackType } from './Type/DevStackType'
+import Footer from './components/Footer/Footer'
 
 const fetchStacks = async ():Promise<DevStackType[]>=>{
   const res =  await fetch("/devStack.json");
@@ -23,7 +24,9 @@ function App() {
     <Banner></Banner>
     <Suspense fallback={<p>Loading...</p>}>
       <DevStacksTech devStackPromise={devStackPromise}></DevStacksTech>
-    </Suspense>
+    </Suspense> 
+
+    <Footer></Footer>
      
     </>
   )
