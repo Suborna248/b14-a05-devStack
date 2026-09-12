@@ -1,4 +1,4 @@
-import React, { useState, type Dispatch, type SetStateAction } from 'react';
+import {  type Dispatch, type SetStateAction } from 'react';
 import type { DevStackType } from '../../Type/DevStackType';
 import { GoStarFill } from 'react-icons/go';
 import { TiTick } from 'react-icons/ti';
