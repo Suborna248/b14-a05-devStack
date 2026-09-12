@@ -12,11 +12,12 @@ interface DevStackCardsProps {
 const DevStackCards = ({devStack,devAddStacks,setdevAddStack}:DevStackCardsProps) => {
    
 
-    const isAdded = devAddStacks.some(
-  (stack) => stack.id === devStack.id
-);
+    const isAdded = devAddStacks.some((stack) => stack.id === devStack.id);
+
+   
   
     const handledevAddStack =()=>{
+     
 
         setdevAddStack([...devAddStacks,devStack])
        toast.success(`${devStack.name} is Successfully added`)
